@@ -6,7 +6,7 @@ Este é um projeto Android que consome a API de piadas do Chuck Norris para exib
 
 ## Capturas de tela
 
-![Captura de tela 1](img/app.png) !
+![Captura de tela 1](img/app.jpg) !
 
 ## Funcionalidades
 
