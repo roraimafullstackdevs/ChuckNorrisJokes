@@ -54,12 +54,33 @@
         android:layout_marginTop="20dp"
         >
 
-        <ImageView
-            android:layout_width="153dp"
-            android:layout_height="115dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/chucknorris_logo"
-            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="35dp"
+                android:src="@drawable/chucknorris_logo"
+                android:layout_gravity="center_vertical">
+            </ImageView>
+
+            <Button
+                android:id="@+id/buttonShare"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text=""
+                android:background="@android:drawable/ic_menu_share"
+                android:layout_gravity="center_horizontal|end"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
             android:id="@+id/jokeLabel"
@@ -70,6 +91,7 @@
             android:textSize="16sp"
             android:maxWidth="150dp"
             android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/row"
             android:contentDescription="Chuck Norris put 5 of his good friends in the hospital, after they challenged him to a pillow fight."
             android:text="Chuck Norris put 5 of his good friends in the hospital, after they challenged him to a pillow fight."
             />
